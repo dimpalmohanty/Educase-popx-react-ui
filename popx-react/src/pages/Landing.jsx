@@ -4,17 +4,29 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="container">
-      <h2>Welcome to PopX</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
+    <div className="landing-page">
+      <div className="landing-content">
+        <h2 className="landing-title">Welcome to PopX</h2>
 
-      <button onClick={() => navigate("/signup")}>
-        Create Account
-      </button>
+        <p className="landing-subtitle">
+          Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit,
+        </p>
 
-      <button onClick={() => navigate("/login")}>
-        Already Registered? Login
-      </button>
+        <button
+          className="landing-btn primary"
+          onClick={() => navigate("/signup")}
+        >
+          Create Account
+        </button>
+
+        <button
+          className="landing-btn secondary"
+          onClick={() => navigate("/login")}
+        >
+          Already Registered? Login
+        </button>
+      </div>
     </div>
   );
 };
